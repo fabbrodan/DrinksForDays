@@ -1,5 +1,5 @@
 .menuActive {
-    color: red;
+    color: maroon !important;
 }
 
 #nav-menu {
@@ -9,5 +9,7 @@
 }
 
 #nav-menu a {
+    font-size: x-large;
     margin-right: 10px; 
+    color: black;
 }

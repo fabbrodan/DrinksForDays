@@ -1,0 +1,12 @@
+.drinkLabel {
+    text-decoration: underline;
+}
+
+.selectable:hover {
+    cursor: pointer;
+}
+
+.resultRow {
+    width: 100%;
+    height: auto;
+}
