@@ -19,18 +19,22 @@ const SearchResult = ({searchString}) => {
         <Container>
             <Row>
             {
-                results.map(r => (
+                results.length > 0 || searchString === "" ? 
+                    results.map(r => (
+                        <Col lg={4} md={6} sm={12}>
+                            <Row>
+                                <Col>
+                                    <p>Name: <a href="/abc">{r.name}</a></p>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <img src={r.image} alt={r.name}/>
+                            </Row>
+                        </Col>
+                    )) : 
                     <Col>
-                        <Row>
-                            <Col>
-                                <p>Name: <a href="/abc">{r.name}</a></p>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <img src={r.image} alt={r.name}/>
-                        </Row>
+                        <h3>No results</h3>
                     </Col>
-                ))
             }
             </Row>
         </Container>
