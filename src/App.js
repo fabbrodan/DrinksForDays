@@ -1,23 +1,26 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container'
 import './App.css';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import Homepage from './Pages/Homepage'
+import Explore from './Pages/Explore';
+import Header from './Components/Header'
+import Menu from './Components/Menu'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="App">
+        <BrowserRouter>
+        <Header/>
+        <Menu/>
+          <Container className="PageContent">
+            <Switch>
+              <Route path='/' component={Homepage} exact={true}/>
+              <Route path='/Explore' component={Explore} />
+            </Switch>
+          </Container>
+        </BrowserRouter>
+    </Container>
   );
 }
 
