@@ -9,6 +9,7 @@ let Explore = () => {
 
     const Search = e => {
         e.preventDefault();
+        setTerm("");
         setTerm(e.target["searchTerm"].value);
     }
 
