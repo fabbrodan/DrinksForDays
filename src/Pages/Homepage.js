@@ -4,12 +4,14 @@ import '../Styles/Homepage.css';
 
 let Homepage = () => {
     return(
-        <Container fluid id="HomePageContent">
-            <Row>
+        <Container fluid className="fullPage">
+            <Row class="pt-15">
                 <Col>
-                    <h1>Homepage</h1>
+                    <h1>Welcome to explore the world of drinks and cocktails!</h1>
                 </Col>
             </Row>
+            <Container id="HomePageContent">
+            </Container>
         </Container>
     )
 }

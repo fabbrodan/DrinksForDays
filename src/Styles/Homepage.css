@@ -1,3 +1,8 @@
+.fullPage {
+    height: 100%;
+    width: 100%;
+}
+
 #HomePageContent {
     background: url(../Images/cocktail-background.png);
     background-position: center;
@@ -6,4 +11,8 @@
 
     height: 100%;
     width: 100%;
+}
+
+.pt-15 {
+    padding-top: 15px;
 }

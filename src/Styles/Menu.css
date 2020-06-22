@@ -1,3 +1,13 @@
 .menuActive {
     color: red;
 }
+
+#nav-menu {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+#nav-menu a {
+    margin-right: 10px; 
+}
