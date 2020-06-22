@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Container, Row, Col, InputGroup, FormControl, Form} from 'react-bootstrap'
-import SearchEngine from '../Util/SearchEngine'
+import SearchResult from '../Components/SearchResult'
 
 let Explore = () => {
 
@@ -10,6 +10,10 @@ let Explore = () => {
         e.preventDefault();
         setTerm(e.target["searchTerm"].value);
     }
+
+    useEffect(() => {
+        
+    }, [searchTerm]);
 
     return(
         <Container>
@@ -27,7 +31,7 @@ let Explore = () => {
             </Row>
             <Row>
                 <Col>
-                    <SearchEngine searchString={searchTerm}/>
+                    <SearchResult searchString={searchTerm}/>
                 </Col>
             </Row>
         </Container>
